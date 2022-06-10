@@ -14,17 +14,49 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', ['titolo' => 'Naviga tre le varie pagine!']);
 })->name('home');
 
 Route::get('/rotta_uno', function () {
-    return view('rotta_uno');
+    $data = [
+        'marca' => 'Alfa Romeo',
+        'modello' => 'Giulia',
+        'allestimeni' => [
+            'Super',
+            'Sprint',
+            'Ti',
+            'Veloce',
+            'Estrema',
+            'Quadrifoglio'
+        ]
+    ];
+    return view('rotta_uno', $data);
 })->name('rotta_uno');
 
 Route::get('/rotta_due', function () {
-    return view('rotta_due');
+    $data = [
+        'titolo' => 'Sully',
+        'cast' => [
+            'Tom Hanks',
+            'Aaron Eckhart',
+            'Laura Linney',
+            'Anna Gum',
+            'Autumn Reeser',
+            'Sam Huntington'
+        ]
+    ];
+    return view('rotta_due', $data);
 })->name('rotta_due');
 
 Route::get('/rotta_tre', function () {
-    return view('rotta_tre');
+    $data = [
+        'titolo' => 'Lista spesa',
+        'oggetti' => [
+            'Verdure',
+            'Affettati',
+            'Carne',
+            'Bibite'
+        ]
+    ];
+    return view('rotta_tre', $data);
 })->name('rotta_tre');

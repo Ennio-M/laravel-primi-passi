@@ -42,6 +42,7 @@
     </header>
     <main>
         <h1 class="text-center p-4">Hello World!</h1>
+        <h2 class="text-center">{{$titolo}}</h2>
     </main>
 </body>
 </html>

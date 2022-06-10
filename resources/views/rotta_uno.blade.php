@@ -42,6 +42,14 @@
         </header>
         <main>
             <h1 class="text-center p-4">Prima rotta</h1>
+            <h4>{{$marca}} {{$modello}}</h4>
+            <p class="m-0">Allestimenti</p>
+            <ul>
+                @foreach ($allestimeni as $allestimento)
+                    <li>{{ $allestimento }}</li>
+                @endforeach
+            </ul>
+            
         </main>
 </body>
 </html>

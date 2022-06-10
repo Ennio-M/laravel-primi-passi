@@ -42,6 +42,12 @@
         </header>
         <main>
             <h1 class="text-center p-4">Terza rotta</h1>
+            <h4>{{$titolo}}</h4>
+            <ul>
+                @foreach ($oggetti as $item)
+                    <li>{{$item}}</li>
+                @endforeach
+            </ul>
         </main>
 </body>
 </html>

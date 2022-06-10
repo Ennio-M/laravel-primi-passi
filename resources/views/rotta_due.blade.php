@@ -42,6 +42,13 @@
         </header>
         <main>
             <h1 class="text-center p-4">Seconda rotta</h1>
+            <h4>{{$titolo}}</h4>
+            <p class="m-0">Cast</p>
+            <ul>
+                @foreach ($cast as $attore)
+                <li>{{$attore}}</li>
+                @endforeach
+            </ul>
         </main>
 </body>
 </html>
